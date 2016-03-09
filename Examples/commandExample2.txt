@@ -1,0 +1,219 @@
+AAA Cloud V1.0 © Alexandru-Adrian Achiritoaei, 325CC, 2015-2016
+Welcome, guest, to my personalized version of a cloud!
+For help, use command 'man'!
+Enjoy!
+>ls
+>pwd
+Permission denied.
+>mkdir
+Permission denied.
+>touch
+Permission denied.
+>showusers
+guest root 
+>userinfo root
+Username : root
+Firstname : 
+Lastname : 
+Created : Thu Jan 07 00:53:37 EET 2016
+Last login : Thu Jan 07 00:53:37 EET 2016
+>userinfo
+Username : guest
+Firstname : 
+Lastname : 
+Created : Thu Jan 07 00:53:37 EET 2016
+Last login : Thu Jan 07 00:53:37 EET 2016
+>newuser myuser mypass myname
+Only the root user is allowed to create new users.
+>login root rootpass
+Login succesful.
+>ls -l
+homeForAll 24000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+>ls -lr
+homeForAll 24000 - true true [Thu Jan 07 00:53:37 EET 2016]
+
+homeForAll:
+dirForAll 16000 - true true [Thu Jan 07 00:53:37 EET 2016]
+fileForAll 8000 - true true [Thu Jan 07 00:53:37 EET 2016]
+
+dirForAll:
+myDir 8000 - true true [Thu Jan 07 00:53:37 EET 2016]
+myFile 8000 - true true [Thu Jan 07 00:53:37 EET 2016]
+
+myDir:
+simpleFile 8000 - true true [Thu Jan 07 00:53:37 EET 2016]
+
+>pwd
+/
+>cd homeForall
+Directory not found.
+>cd homeForAll
+>cd dirForAll
+>cd myDir
+>pwd
+/homeForAll/dirForAll/myDir
+>ls
+simpleFile 
+>cat simpleFile 
+simpleFile :   
+Acesta este un fisier simplu
+>edit simpleFile
+simpleFile :
+Acesta este un fisier simplu
+care e a fost editat de mine intr-o fereastra noua
+>cd ../../../../../..
+>pwd
+/
+>cat /homeForAll/dirForAll/myDir/simpleFile
+simpleFile : 
+Acesta este un fisier simplu
+care e a fost editat de mine intr-o fereastra noua
+>mkdir newdir 
+Directory created.
+homeForAll 24000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+newdir 0 - true true [Thu Jan 07 01:01:55 EET 2016] directory
+>cd homeForAll
+>cd dirForAll
+>pwd
+homeForAll/dirForAll
+>cd ../../newdir
+>pwd
+/newdir
+>cd
+/
+>newuser user1 parola1
+User created.
+>showusers
+guest root user1
+>login user1 parola1
+Login succesful.
+>mkdir user1home -rw-
+Directory created
+>cd user1home
+>touch myfile 5000
+File created
+>mkdir dir1
+Directory created.
+>ls -l
+myfile 5000 user1 true true [Thu Jan 07 01:04:23 EET 2016] file
+dir1 0 user1 true true [Thu Jan 07 01:04:34 EET 2016] directory
+>ls -a
+user1home 5000 user1 true true [Thu Jan 07 01:04:11 EET 2016] directory
+>logout
+>userinfo
+Username : guest
+Firstname : 
+Lastname : 
+Created : Thu Jan 07 00:53:37 EET 2016
+Last login : Thu Jan 07 00:53:37 EET 2016
+>login root rootpass
+Login succesful.
+>man
+Available commands:
+	ls, cd, cat, pwd, touch, mkdir, rm, login, logout, userinfo, newuser, showusers, echo, edit
+	sync, upload, cloudspace, cloudclear
+	Usage : man <command name>
+>man ls
+	ls - list repository contents
+	     Usage : ls <name> <parameter>
+	     Parameters:
+	          -a/-l : detailed information about repository
+	                  name size owner read write creationDate type
+	          -r : list directory recursively
+	          -POO : nicely-formatted output
+>man rm
+	rm - remove files or directories
+	     Usage : rm <name> <parameter>
+	     The name given may also contain a path.
+	     For a directory you have to use '-r' parameter.
+>man sync
+sync - sync a file/directory from the cloud
+	     Usage : sync <name>
+>man upload
+	upload - upload a file/directory to the cloud
+	     Usage : upload <name>
+>cloudspace
+Station 1 has 0 occupied space.
+Station 2 has 0 occupied space.
+Station 3 has 0 occupied space.
+>ls -ar
+/ 29000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+homeForAll 24000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+dirForAll 16000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+myDir 8000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+simpleFile 8000 - true true [Thu Jan 07 00:53:37 EET 2016] file
+myFile 8000 - true true [Thu Jan 07 00:53:37 EET 2016] file
+fileForAll 8000 - true true [Thu Jan 07 00:53:37 EET 2016] file
+newdir 0 - true true [Thu Jan 07 01:01:55 EET 2016] directory
+user1home 5000 user1 true true [Thu Jan 07 01:04:11 EET 2016] directory
+myfile 5000 user1 true true [Thu Jan 07 01:04:23 EET 2016] fil
+dir1 0 user1 true true [Thu Jan 07 01:04:34 EET 2016] directory
+>upload homeForAll
+Directory stored.
+>cloudspace
+Station 1 has 8000 occupied space.
+Station 2 has 8000 occupied space.
+Station 3 has 8000 occupied space.
+>cd homeForAll
+>ls -l
+dirForAll 16000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+fileForAll 8000 - true true [Thu Jan 07 00:53:37 EET 2016] file
+
+>rm -r (.*)All
+File removed.
+Directory removed.
+File removed.
+Directory removed.
+File removed.
+>ls -l
+
+>cd ..
+>pwd
+/
+>ls
+homeForAll  newdir  user1home  
+>ls -a
+/ 5000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+>sync homeForAll
+Directory synchronized from the cloud.
+>ls -ar
+/ 29000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+newdir 0 - true true [Thu Jan 07 01:01:55 EET 2016] directory
+user1home 5000 user1 true true [Thu Jan 07 01:04:11 EET 2016] directory
+myfile 5000 user1 true true [Thu Jan 07 01:04:23 EET 2016] file
+dir1 0 user1 true true [Thu Jan 07 01:04:34 EET 2016] directory
+homeForAll 24000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+dirForAll 16000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+myDir 8000 - true true [Thu Jan 07 00:53:37 EET 2016] directory
+simpleFile 8000 - true true [Thu Jan 07 00:53:37 EET 2016] file
+myFile 8000 - true true [Thu Jan 07 00:53:37 EET 2016] file
+fileForAll 8000 - true true [Thu Jan 07 00:53:37 EET 2016] file
+>pwd
+/
+>cd homeForAll/dirForAll/myDir/..
+>pwd
+/homeForAll/dirForAll
+>cd
+>pwd
+/
+>cd mere
+Directory not found.
+>rm mere
+No such file or directory.
+>cloudspace
+Station 1 has 8000 occupied space.
+Station 2 has 8000 occupied space.
+Station 3 has 8000 occupied space.
+>cloudclear
+Cloud cleared.
+>cloudspace
+Station 1 has 0 occupied space.
+Station 2 has 0 occupied space.
+Station 3 has 0 occupied space.
+>touch file1 12000
+File created.
+>upload file1
+Insufficient cloud space.
+Try clearing it using cloudclear, then reupload the file/directory.
+>sync file1
+File not found in the cloud.

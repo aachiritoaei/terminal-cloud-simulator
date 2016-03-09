@@ -1,0 +1,65 @@
+Login
+User : root
+Date of login : Thu Jan 07 00:56:14 EET 2016
+
+MyInvalidPathException
+Current path : /
+Command : cd homeForall
+User : root
+Date : Thu Jan 07 00:57:48 EET 2016
+
+MyInvalidPathException
+Current path : /
+Command : cd dirForAll
+User : root
+Date : Thu Jan 07 00:57:54 EET 2016
+
+MyInvalidPathException
+Current path : /
+Command : cd myDir
+User : root
+Date : Thu Jan 07 00:57:57 EET 2016
+
+MyInvalidPathException
+Current path : /
+Command : cd homeForall
+User : root
+Date : Thu Jan 07 00:58:07 EET 2016
+
+MyInvalidPathException
+Current path : /
+Command : cd .././
+User : root
+Date : Thu Jan 07 01:00:56 EET 2016
+
+Login
+User : user1
+Date of login : Thu Jan 07 01:03:36 EET 2016
+
+Logout
+User : user1
+Date of logout : Thu Jan 07 01:05:47 EET 2016
+
+Login
+User : root
+Date of login : Thu Jan 07 01:06:07 EET 2016
+
+MyInvalidPathException
+Current path : /
+Command : cd mere
+User : root
+Date : Thu Jan 07 01:16:03 EET 2016
+
+MyInvalidPathException
+Current path : /
+Command : rm mere
+User : root
+Date : Thu Jan 07 01:16:04 EET 2016
+
+MyNotEnoughSpaceException
+Current path : /
+Command : upload file1
+User : root
+Size : 12000
+Date : Thu Jan 07 01:17:23 EET 2016
+

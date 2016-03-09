@@ -1,0 +1,30 @@
+Login
+User : root
+Date of login : Thu Jan 07 00:18:29 EET 2016
+
+Login
+User : user2
+Date of login : Thu Jan 07 00:19:54 EET 2016
+
+Login
+User : user1
+Date of login : Thu Jan 07 00:35:13 EET 2016
+
+MyInvalidPathException
+Current path : /user1home/
+Command : rm /user1home/todolist.tx
+User : user1
+Date : Thu Jan 07 00:41:27 EET 2016
+
+Login
+User : root
+Date of login : Thu Jan 07 00:43:49 EET 2016
+
+Login
+User : user1
+Date of login : Thu Jan 07 00:45:26 EET 2016
+
+Logout
+User : user1
+Date of logout : Thu Jan 07 00:47:20 EET 2016
+

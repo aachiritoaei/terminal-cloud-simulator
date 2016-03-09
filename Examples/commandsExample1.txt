@@ -1,0 +1,160 @@
+AAA Cloud V1.0 © Alexandru-Adrian Achiritoaei, 325CC, 2015-2016
+Welcome, guest, to my personalized version of a cloud!
+For help, use command 'man'!
+Enjoy!
+>userinfo
+Username : guest
+Firstname : 
+Lastname : 
+Created : Thu Jan 07 00:16:33 EET 2016
+Last login : Thu Jan 07 00:16:33 EET 2016
+>login root rootpass
+Login succesful.
+>userinfo
+Username : root
+Firstname : 
+Lastname : 
+Created : Thu Jan 07 00:16:33 EET 2016
+Last login : Thu Jan 07 00:18:29 EET 2016
+>newuser user1 parola1 Name1 Surname1
+User created.
+>newuser user2 parola2 Name2 Surname2
+User created.
+>login user2 parola2
+Login succesful.
+>userinfo
+Username : user2
+Firstname : Name2
+Lastname : Surname2
+Created : Thu Jan 07 00:19:50 EET 2016
+Last login : Thu Jan 07 00:19:54 EET 2016
+>mkdir user2home -rw-
+Directory created.
+>mkdir forall
+Directory created.
+>ls
+homeForAll  user2home  forall  
+>cd user2home
+>mkdir EGC
+Directory created.
+>mkdir EG
+Directory created.
+>cd EGC
+>touch tema1.cpp 200 -r-
+File created.
+>rm tema1.cpp
+Permission denied.
+>ls
+tema1.cpp
+>cd ../EG  
+>touch test.txt
+File created.
+>pwd
+/user2home/EG
+>cd ../..
+>ls -ar
+/ 24200 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+homeForAll 24000 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+dirForAll 16000 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+myDir 8000 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+simpleFile 8000 - true true [Thu Jan 07 00:16:33 EET 2016] file
+myFile 8000 - true true [Thu Jan 07 00:16:33 EET 2016] file
+fileForAll 8000 - true true [Thu Jan 07 00:16:33 EET 2016] file
+user2home 200 user2 true true [Thu Jan 07 00:23:03 EET 2016] directory
+EGC 200 user2 true true [Thu Jan 07 00:24:23 EET 2016] directory
+tema1.cpp 200 user2 true false [Thu Jan 07 00:24:44 EET 2016] file
+EG 0 user2 true true [Thu Jan 07 00:24:26 EET 2016] directory
+test.txt 0 user2 true true [Thu Jan 07 00:25:59 EET 2016] file
+forall 0 - true true [Thu Jan 07 00:23:08 EET 2016] directory
+>login user1 parola1
+Login succesful.
+>ls
+homeForAll  forall  
+>rm forall
+Directory removed.
+>ls
+homeForAll
+>mkdir user1home  
+Directory created.
+>cd user1home
+>mkdir IOCLA
+Directory created.
+>mkdir POO
+Directory created.
+>touch todolist.txt 50
+File created.
+>touch rawdata.txt 100 -r-
+File created.
+>cd IOCLA
+>touch c1.txt
+File created.
+>cd ../POO
+>touch tema.java 100 -rw-
+File created.
+>cd ../..
+>ls -ar
+/ 24450 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+homeForAll 24000 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+dirForAll 16000 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+myDir 8000 - true true [Thu Jan 07 00:16:33 EET 2016] directory
+simpleFile 8000 - true true [Thu Jan 07 00:16:33 EET 2016] file
+myFile 8000 - true true [Thu Jan 07 00:16:33 EET 2016] file
+fileForAll 8000 - true true [Thu Jan 07 00:16:33 EET 2016] file
+user1home 250 - true true [Thu Jan 07 00:35:30 EET 2016] directory
+IOCLA 0 - true true [Thu Jan 07 00:35:36 EET 2016] directory
+c1.txt 0 - true true [Thu Jan 07 00:38:22 EET 2016] file
+POO 100 - true true [Thu Jan 07 00:35:39 EET 2016] directory
+tema.java 100 user1 true true [Thu Jan 07 00:38:32 EET 2016] file
+todolist.txt 50 - true true [Thu Jan 07 00:35:45 EET 2016] file
+rawdata.txt 100 user1 true false [Thu Jan 07 00:35:53 EET 2016] file
+>rm /user1home/todolist.tx
+No such file or directory.
+>rm /user1home/todolist.txt
+File removed.
+>rm /user1home/rawdata.txt
+Permission denied.
+>ls user1home
+IOCLA  POO  rawdata.txt 
+>ls -a user1home
+user1home 200 - true true [Thu Jan 07 00:35:30 EET 2016] directory
+>ls -l user1home
+IOCLA 0 - true true [Thu Jan 07 00:35:36 EET 2016] directory
+POO 100 - true true [Thu Jan 07 00:35:39 EET 2016] directory
+rawdata.txt 100 user1 true false [Thu Jan 07 00:35:53 EET 2016] file
+>login root rootpass
+Login succesful.
+>rm user1home/rawdata.txt
+File removed.
+>ls -l user1home
+IOCLA 0 - true true [Thu Jan 07 00:35:36 EET 2016] directory
+POO 100 - true true [Thu Jan 07 00:35:39 EET 2016] directory
+>touch general.conf
+File created.
+>login user1 parola1
+Login succesful.
+>rm general.conf
+File removed.
+>ls 
+homeForAll  user1home 
+>ls -l user1home
+IOCLA 0 - true true [Thu Jan 07 00:35:36 EET 2016] directory
+POO 100 - true true [Thu Jan 07 00:35:39 EET 2016] directory
+>rm -r user1home/(.*)O(.*)
+File removed.
+Directory removed.
+File removed.
+Directory removed.
+>ls user1home -l
+
+>logout
+Logout succesful.
+>userinfo
+Username : guest
+Firstname : 
+Lastname : 
+Created : Thu Jan 07 00:16:33 EET 2016
+Last login : Thu Jan 07 00:16:33 EET 2016
+>mkdir
+Permission denied.
+>touch
+Permission denied.
