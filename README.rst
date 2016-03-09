@@ -22,3 +22,18 @@ The basic info required to use may be accessed typing 'man' in the terminal.
 The cloud features 3 stations of a set size(10000), in which files can be stored.
 
 NOTE: This is not a real cloud. Files are stored virtually.
+
+Usage
+-----
+
+- Windows
+
+Run executable from 'Windows EXE' folder.
+
+- Linux
+
+Run 'java -jar AAACloud.jar' in terminal.
+
+- Eclipse IDE
+
+Import project, then run.
